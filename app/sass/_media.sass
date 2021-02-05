@@ -1,0 +1,515 @@
+@import "vars"
+/*==========  Desktop First  ==========*/
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+	.nav
+		&-list
+			&__item
+				font-size: 14px
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.nav
+		&-list
+			&__item
+				font-size: 12px
+	.services
+		.col-md-auto:last-child
+			.services-item
+				margin-top: 20px
+	.benefits
+		&-ttl
+			font-size: 30px
+	.products
+		.container
+			padding-top: 0
+			border: none
+			&:before, &:after
+				display: none
+		&-ttl
+			display: table
+			margin: 0 auto 40px
+	.form
+		&-content
+			&__name
+				flex: 1 0 100%
+				text-align: center
+				margin-bottom: 20px
+			.rline
+				margin: 0 auto
+			&__btn
+				margin: 0 auto
+			&:before, &:after
+				display: none
+	.sample
+		&-ttl
+			margin-top: 20px
+		&-form
+			.rline
+				margin: 0 auto
+				& + .rline
+					margin-left: auto
+			&__btn
+				margin: 40px auto
+	.sertif
+		&-form
+			&__ttl
+				flex: 1 0 100%
+				margin-bottom: 20px
+			.rline
+				margin: 0 auto
+			&__btn
+				margin: 0 auto
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.nav
+		&-btn
+			position: relative
+			z-index: 1
+		&-left:after
+			width: 60px
+			background-size: cover
+			background-position: right center
+		&-mob
+			position: fixed
+			width: 100%
+			z-index: 10
+			background-color: #fff
+			padding: 0
+			max-height: 0
+			height: auto
+			transition: all ease .3s
+			overflow: hidden
+			&.active
+				max-height: 350px
+				padding: 10px 0
+		&-list
+			flex-direction: column
+			&__item
+				margin: 0 auto 10px
+				font-size: 18px
+				&:last-child
+					margin-bottom: 0
+		&-lang
+			width: fit-content
+			flex-direction: row
+			margin: 20px auto 0
+			&__item
+				font-size: 18px
+				&.active
+					color: #000
+			&__line
+				background-color: #000
+				margin: 0 10px
+	.head
+		margin-top: 54px
+		&-wrap
+			background-color: transparent
+			padding: 0
+			backdrop-filter: none
+			border-radius: 0
+		&__ttl
+			width: fit-content
+			background: rgba(23, 23, 23, 0.4)
+			backdrop-filter: blur(4px)
+			border-radius: 5px
+			padding: 15px 30px
+		&-block
+			width: fit-content
+			background: rgba(0, 0, 0, 0.4)
+			backdrop-filter: blur(4px)
+			border-radius: 5px
+			padding: 15px 30px 30px
+	.services
+		&-item
+			&__txt
+				p
+					font-size: 14px
+	.benefits
+		&-ttl
+			margin-left: 35px
+			margin-top: 125px
+		&__img
+			left: 10px
+		.posa
+			position: static
+			transform: none
+		&-item
+			&_2
+				margin-top: 0
+			&_3
+				margin-top: 40px
+	.products
+		&-ttl
+			font-size: 35px
+		&-item
+			&__name
+				min-height: 40px
+	.form
+		&-name
+			max-width: 100%
+			margin-bottom: 20px
+		&-content
+			&__btn
+				margin-top: 40px
+	.about
+		&-ttl
+			margin-top: 0
+			background-color: transparent
+			padding-top: 50px
+			&:before
+				display: none
+		&-note
+			top: 95px
+		&-img
+			margin-bottom: 20px
+		&-btn
+			margin: 50px auto
+		.col-sm-6
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+	.team
+		&-item
+			&__img
+				margin: 0 auto
+	.clients
+		.posa
+			position: static
+			transform: none
+		&-ttl
+			margin-top: 0
+		&-flex
+			display: flex
+			align-items: center
+			&__wrap
+				width: 50%
+				padding: 0 10px
+		&-slider
+			padding-bottom: 60px
+			&__slide
+				outline: none
+				margin: 0 10px
+			.slick-arrow
+				width: 80px
+				height: 60px
+				background-color: #363636
+				border: 3px solid #fff
+				font-size: 0
+				position: absolute
+				bottom: 0
+				z-index: 2
+				background-image: url(../img/slider-arrow.svg)
+				background-size: 47px 14px
+				background-position: center center
+				background-repeat: no-repeat
+				&:hover
+					background-color: #F6CC48
+				&.slick-prev
+					left: 50%
+					transform: translate(-100%, 0)
+				&.slick-next
+					right: 50%
+					transform: rotate(180deg) translate(-100%, 0)
+	.sample-img
+		margin: 0 auto
+	.sertif-form__btn
+		margin: 40px auto 20px
+	.contacts
+		&:before
+			display: none
+		&-btn
+			margin: 40px auto
+	.map
+		position: static
+		width: 100%
+		height: 350px
+	.foot
+		padding-bottom: 20px
+		&:before
+			height: 117px
+		&__logo
+			margin-bottom: 20px
+		&-list
+			margin-bottom: 20px
+		&-subttl
+			padding-top: 20px
+	.page
+		margin-top: 54px
+	.production
+		&-item
+			&__ttl
+				&:before
+					width: 100vw
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.nav
+		&__logo
+			max-width: 134px
+		&__phone
+			font-size: 14px
+	.head
+		margin-top: 51px
+		&-block
+			&__item
+				p
+					font-size: 18px
+				svg
+					max-width: 35px
+			&__btn
+				font-size: 14px
+	.services
+		&__ttl
+			font-size: 30px
+			&:after
+				bottom: -7px
+		.col-md-auto
+			.services-item
+				margin-bottom: 20px
+			&:last-child .services-item
+				margin-top: 0
+				margin-bottom: 0
+		&-item
+			width: fit-content
+			margin: 0 auto
+	.benefits
+		&-item
+			margin-bottom: 20px
+			&_3, &.mt-80
+				margin-top: 0
+			&_2, &_4
+				float: right
+				max-width: 75%
+			&_4
+				margin-bottom: 0
+	.products
+		&-item
+			margin-bottom: 20px
+		.col-lg-3:last-child .products-item
+			margin-bottom: 0
+		&-ttl
+			max-width: 260px
+			margin: 0
+			margin-left: 30px
+			margin-bottom: 40px
+	.calc
+		&-ttl
+			font-size: 30px
+	.form
+		&-checkbox
+			max-width: 330px
+			margin: 0 auto 20px
+			flex: 1 0 100%
+			&.mw160
+				max-width: 330px
+			&:last-child
+				margin-bottom: 0
+				margin-right: auto
+			&__img
+				width: 100%
+		&-content
+			padding: 30px
+			.rline
+				width: 100%
+				max-width: 330px
+				& + .rline
+					margin-top: 20px
+			&__btn
+				max-width: 304px
+	.about
+		&:before
+			width: 140px
+			height: 180px
+		.container:before
+			width: 100%
+			left: 0
+		&-note
+			font-size: 32px
+			span
+				font-size: 32px
+				letter-spacing: 10px
+		&-btn
+			padding: 15px 25px 15px 10px
+			font-size: 14px
+	.team
+		&-slider
+			padding-bottom: 80px
+			&__slide
+				outline: none
+				margin: 0 10px
+			.slick-arrow
+				width: 80px
+				height: 60px
+				background-color: #363636
+				border: 3px solid #fff
+				font-size: 0
+				position: absolute
+				bottom: 0
+				z-index: 2
+				background-image: url(../img/slider-arrow.svg)
+				background-size: 47px 14px
+				background-position: center center
+				background-repeat: no-repeat
+				&:hover
+					background-color: #F6CC48
+				&.slick-prev
+					left: 50%
+					transform: translate(-100%, 0)
+				&.slick-next
+					right: 50%
+					transform: rotate(180deg) translate(-100%, 0)
+	.sample-form, .sertif-form
+		.rline
+			max-width: 330px
+			flex: 1 0 100%
+			& + .rline
+				margin-top: 20px
+		&__btn
+			flex: 1 0 100%
+			max-width: 306px
+	.contacts
+		&-btn
+			font-size: 14px
+		&-addr
+			&__time
+				padding-left: 0
+	.foot
+		&:before
+			height: 147px
+	.dev
+		display: block
+		max-width: 160px
+		margin: 20px auto 0
+		&-txt
+			color: #000
+	.page
+		margin-top: 51px
+	.production
+		&-item
+			&__ttl
+				&:before
+					left: 50%
+					transform: translate(-50%, 0)
+	.modal
+		max-width: 460px
+		background-color: #F6CC48
+		padding: 15px 20px 30px
+		&:before
+			display: none
+		&-ttl
+			font-size: 24px
+	.flex
+		&-wrap
+			width: 100%
+
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.head
+		background-image: url(../img/head_bg_mw460.webp)
+		&-block
+			padding: 15px
+			&__btn
+				margin: 40px auto 10px
+		&__ttl
+			font-size: 25px
+			padding: 15px
+			margin-bottom: 50px
+			span
+				font-size: 40px
+	.services
+		&-item
+			max-width: 339px
+			margin-left: 10px
+	.no-webp
+		.head
+			background-image: url(../img/head_bg_mw460.jpg)
+		.page
+			&_interior
+				background-image: url(../img/head_bg_mw460_page.jpg)
+	.page
+		&_interior
+			background-image: url(../img/head_bg_mw460_page.webp)
+		&-wrap
+			background-color: transparent
+			padding: 0
+			backdrop-filter: none
+			border-radius: 0
+		&__ttl
+			width: fit-content
+			background: rgba(23, 23, 23, 0.51)
+			backdrop-filter: blur(4px)
+			border-radius: 5px
+			padding: 15px
+		&-block
+			max-width: 330px
+			width: fit-content
+			background: rgba(0, 0, 0, 0.51)
+			backdrop-filter: blur(4px)
+			border-radius: 5px
+			padding: 15px 15px 30px
+			&__btn
+				font-size: 14px
+				padding: 15px 50px
+				margin: 40px auto 0
+		&-item
+			&__ico
+				width: 80px
+				height: 70px
+				margin-right: 10px
+			&__txt
+				width: calc(100% - 90px)
+				font-size: 18px
+	.production
+		&-ttl
+			font-size: 30px
+			&:after
+				bottom: -7px
+		&-slider
+			padding: 0
+			padding-bottom: 80px
+			.slick-arrow
+				top: inherit
+				bottom: 0
+				&.slick-prev
+					left: 50%
+					transform: translate(-100%, 0)
+				&.slick-next
+					right: 50%
+					transform: rotate(180deg) translate(-100%, 0)
+		&-item
+			&__ttl
+				font-size: 18px
+	.benefits
+		background-image: url(../img/benefits_bg_mw460.webp)
+		background-repeat: no-repeat
+		background-size: contain
+		background-color: #DFE0E2
+	.no-webp
+		.benefits
+			background-image: url(../img/benefits_bg_mw460.jpg)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
+	.sample-form__btn
+		width: 100%
